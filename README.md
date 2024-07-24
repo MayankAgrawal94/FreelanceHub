@@ -1,12 +1,24 @@
-# DEEL BACKEND TASK
+# Job Contract Management System
 
-💫 Welcome! 🎉
+The Job Contract Management System is a backend application built using Node.js and Express.js. This system simulates a platform where clients can create contracts with contractors, and contractors can perform jobs for clients. The application manages profiles, contracts, and job payments, ensuring a seamless workflow between clients and contractors.
 
-This backend exercise involves building a Node.js/Express.js app that will serve a REST API. We imagine you should spend around 3 hours at implement this feature.
+## Key Features:
+
+- **_Profile Management_**: Supports both client and contractor profiles, each with a balance property.
+
+- **_Contract Handling_**: Allows creation and management of contracts with various statuses (new, in_progress, terminated).
+
+- **_Job Management_**: Enables contractors to get paid for jobs performed under specific contracts.
+
+- **_Payment Processing_**: Ensures clients can pay contractors based on their balance and job requirements.
+
+- **_Administrative Insights_**: Provides endpoints to fetch top-earning professions and highest-paying clients within a specified timeframe.
+
+This project demonstrates a robust REST API with essential functionalities for managing job contracts and payments, serving as a foundational backend for a job contracting platform.
 
 ## Data Models
 
-> **All models are defined in src/model.js**
+> **All models are defined under src/models/_.js**
 
 ### Profile
 
@@ -24,19 +36,23 @@ Contracts group jobs within them.
 
 contractor get paid for jobs by clients under a certain contract.
 
-## Getting Set Up
+## Installation & Set Up
 
-The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We recommend using the LTS version.
+The exercise requires [Node.js](https://nodejs.org/en/) to be installed. I recommend using the LTS version >= 18.
 
-1. Start by creating a local repository for this folder.
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/MayankAgrawal94/Job-Contract-Management-System.git
+    cd Job-Contract-Management-System
+    ```
 
 1. In the repo root directory, run `npm install` to gather all dependencies.
 
 1. Next, `npm run seed` will seed the local SQLite database. **Warning: This will drop the database if it exists**. The database lives in a local file `database.sqlite3`.
 
-1. Then run `npm start` which should start both the server and the React client.
+1. Then run `npm start` which should start the server .
 
-❗️ **Make sure you commit all changes to the master branch!**
 
 ## Technical Notes
 
@@ -47,11 +63,11 @@ The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We reco
 - To authenticate users use the `getProfile` middleware that is located under src/middleware/getProfile.js. users are authenticated by passing `profile_id` in the request header. after a user is authenticated his profile will be available under `req.profile`. make sure only users that are on the contract can access their contracts.
 - The server is running on port 3001.
 
-## APIs To Implement
+## APIs description
 
 Below is a list of the required API's for the application.
 
-1. **_GET_** `/contracts/:id` - This API is broken 😵! it should return the contract only if it belongs to the profile calling. better fix that!
+1. **_GET_** `/contracts/:id` - This API return the contract only if it belongs to the profile calling.
 
 1. **_GET_** `/contracts` - Returns a list of contracts belonging to a user (client or contractor), the list should only contain non terminated contracts.
 
@@ -85,14 +101,9 @@ Below is a list of the required API's for the application.
 ]
 ```
 
-## Going Above and Beyond the Requirements
+## Contributing
+If you have any suggestions or improvements, feel free to submit a pull request or open an issue.
 
-Given the time expectations of this exercise, we don't expect anyone to submit anything super fancy, but if you find yourself with extra time, any extra credit item(s) that showcase your unique strengths would be awesome! 🙌
-
-It would be great for example if you'd write some unit test / simple frontend demostrating calls to your fresh APIs.
-
-## Submitting the Assignment
-
-When you have finished the assignment, zip your repo (make sure to include .git folder) and send us the zip.
-
-Thank you and good luck! 🙏
+## Contact
+If you have any feedback, questions, or suggestions, feel free to reach out.
+connect me at `jobs@mayankagrawal.co.in` or can DM me on [LinkedIn](https://www.linkedin.com/in/er-mayank/).
