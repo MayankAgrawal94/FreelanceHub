@@ -53,7 +53,9 @@ const getBestClients = async (req, res) => {
     const clients = await Profile.findAll({
       where: { type: 'client' },
       attributes: [
-        'id', 'firstName', 'lastName',
+        'id', 
+        // 'firstName', 'lastName',
+        [sequelize.fn('concat', sequelize.col('firstName'), ' ', sequelize.col('lastName')), 'fullName'],
         [sequelize.fn('sum', sequelize.col('Client.Jobs.price')), 'totalPaid'] 
       ],
       include: [
