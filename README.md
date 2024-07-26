@@ -2,6 +2,23 @@
 
 **FreelanceHub** is a comprehensive backend application built using Node.js, Express.js & SQL, designed to simulate the core functionalities of freelance marketplaces like UpWork. This system enables clients to create contracts with contractors, who can then perform jobs for these clients. The application facilitates seamless management of profiles, contracts, and job payments, ensuring an efficient and user-friendly workflow for both clients and contractors.
 
+## Installation & Set Up
+
+The exercise requires [Node.js](https://nodejs.org/en/) to be installed. I recommend using the LTS version >= 18.
+
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/MayankAgrawal94/FreelanceHub.git
+    cd FreelanceHub
+    ```
+
+1. In the repo root directory, run `npm install` to gather all dependencies.
+
+1. Next, `npm run seed` will seed the local SQLite database. **Warning: This will drop the database if it exists**. The database lives in a local file `database.sqlite3`.
+
+1. Then run `npm start` which should start the server .
+   
 ## Key Features:
 
 - **_Profile Management_**: Supports both client and contractor profiles, each with a balance property.
@@ -35,24 +52,6 @@ Contracts group jobs within them.
 ### Job
 
 contractor get paid for jobs by clients under a certain contract.
-
-## Installation & Set Up
-
-The exercise requires [Node.js](https://nodejs.org/en/) to be installed. I recommend using the LTS version >= 18.
-
-1. Clone the repository:
-
-    ```sh
-    git clone https://github.com/MayankAgrawal94/FreelanceHub.git
-    cd FreelanceHub
-    ```
-
-1. In the repo root directory, run `npm install` to gather all dependencies.
-
-1. Next, `npm run seed` will seed the local SQLite database. **Warning: This will drop the database if it exists**. The database lives in a local file `database.sqlite3`.
-
-1. Then run `npm start` which should start the server .
-
 
 ## Technical Notes
 
