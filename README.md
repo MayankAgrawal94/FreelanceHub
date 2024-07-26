@@ -1,6 +1,6 @@
-# Job Contract Management System
+# FreelanceHub
 
-The Job Contract Management System is a backend application built using Node.js and Express.js. This system simulates a platform where clients can create contracts with contractors, and contractors can perform jobs for clients. The application manages profiles, contracts, and job payments, ensuring a seamless workflow between clients and contractors.
+**FreelanceHub** is a comprehensive backend application built using Node.js, Express.js & SQL, designed to simulate the core functionalities of freelance marketplaces like UpWork. This system enables clients to create contracts with contractors, who can then perform jobs for these clients. The application facilitates seamless management of profiles, contracts, and job payments, ensuring an efficient and user-friendly workflow for both clients and contractors.
 
 ## Key Features:
 
@@ -43,8 +43,8 @@ The exercise requires [Node.js](https://nodejs.org/en/) to be installed. I recom
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/MayankAgrawal94/Job-Contract-Management-System.git
-    cd Job-Contract-Management-System
+    git clone https://github.com/MayankAgrawal94/FreelanceHub.git
+    cd FreelanceHub
     ```
 
 1. In the repo root directory, run `npm install` to gather all dependencies.
